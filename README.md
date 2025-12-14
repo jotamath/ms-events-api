@@ -4,13 +4,15 @@ Este projeto é um **Microserviço de Gestão de Eventos** desenvolvido com **Sp
 ## 🛠️ Tecnologias Utilizadas
 * **Linguagem:** Java
 * **Framework:** Spring Boot 3
-* **Banco de Dados:** H2 Database (em memória, para desenvolvimento)
+* **Banco de Dados:** H2 Database (em memória, para desenvolvimento/simulação somente)
 * **ORM:** Spring Data JPA / Hibernate
 * **Comunicação entre Serviços:** Spring Cloud OpenFeign
 * **Utilitários:** Lombok
-* **Build Tool:** Maven (Presumido)
+* **Build Tool:** Maven
+* **IDE:** Eclipse 2025-12
 
-## 📁 Estrutura da Aplicação (Visão Geral)O serviço expõe endpoints REST para operações CRUD em eventos e um endpoint dedicado para registro de participantes, que contém a lógica de negócio principal.
+## 📁 Estrutura da Aplicação 
+(Visão Geral) O serviço expõe endpoints REST para operações CRUD em eventos e um endpoint dedicado para registro de participantes, que contém a lógica de negócio principal.
 
 | Camada | Classes Chave | Responsabilidade |
 | --- | --- | --- |
@@ -21,24 +23,28 @@ Este projeto é um **Microserviço de Gestão de Eventos** desenvolvido com **Sp
 | **Feign** | `EmailServiceClient` | Cliente HTTP para o Microserviço de E-mail. |
 | **Exceptions** | `EventFullException`, `EventNotFoundException` | Tratamento de erros específicos da aplicação. |
 
-## ⚙️ Configuração e Execução###Pré-requisitos* Java 17 ou superior
+## ⚙️ Configuração e Execução
+### Pré-requisitos
+* Java 17 ou superior
 * Maven
 
-### 1. Clonar e Compilar```bash
+### 1. Clonar e Compilar
+```bash
 # Se você tiver um repositório git
 git clone github.com/jotamath/ms-events-api.git
 cd event-microservice
 
 # Compilar o projeto
 mvn clean install
-
 ```
 
-###2. Executar a Aplicação```bash
+
+###
+2. Executar a Aplicação
+```bash
 # Executar o JAR gerado
 java -jar target/event-microservice-0.0.1-SNAPSHOT.jar 
-# (Ou use a opção Run As Spring Boot App no seu IDE: Eclipse/VS Code)
-
+# (Ou use a opção Run As Spring Boot App no seu IDE: Eclipse/VS Code/IntelliJ)
 ```
 
 O serviço será iniciado na porta padrão do Spring Boot (geralmente `8080`).
