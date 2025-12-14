@@ -49,7 +49,8 @@ java -jar target/event-microservice-0.0.1-SNAPSHOT.jar
 
 O serviço será iniciado na porta padrão do Spring Boot (geralmente `8080`).
 
-## 📡 Endpoints da APIA base da API é `http://localhost:8080/events`.
+## 📡 Endpoints da API
+A base da API é `http://localhost:8080/events`.
 
 | Método | Endpoint | Descrição | Corpo da Requisição | Resposta Esperada |
 | --- | --- | --- | --- | --- |
@@ -57,7 +58,8 @@ O serviço será iniciado na porta padrão do Spring Boot (geralmente `8080`).
 | **GET** | `/events` | Lista todos os eventos. | N/A | Lista de `Event`. |
 | **POST** | `/events/{id}/register` | Registra um participante em um evento. | `{ "participantEmail": "email@teste.com" }` | 200 OK (Em caso de sucesso). |
 
-### Exceções Tratadas| Status | Exceção | Descrição |
+### Exceções Tratadas
+| Status | Exceção | Descrição |
 | --- | --- | --- |
 | **404 Not Found** | `EventNotFoundException` | ID do evento não encontrado no banco. |
 | **400 Bad Request** | `EventFullException` | O evento atingiu o limite de participantes. |
